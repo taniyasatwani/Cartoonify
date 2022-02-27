@@ -12,11 +12,9 @@ import matplotlib.pyplot as plt
 
 st.title('Cartoonify')
 
-def upload():
-    uploaded_file = st.file_uploader("Cartoonify an image")
+uploaded_file = st.file_uploader("Cartoonify an image")
+if uploaded_file is not None:
     cartoonify(uploaded_file)
-
-
 
 def cartoonify(uploaded_file):
     # read the image

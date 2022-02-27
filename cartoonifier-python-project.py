@@ -70,7 +70,7 @@ st.title('Cartoonify')
 
 uploaded_file = st.file_uploader("Cartoonify an image")
 if uploaded_file is not None:
-    path_in = uploaded_file.name
+    path_in = os.path.join(uploaded_file.name)
     st.success(path_in)
 #if uploaded_file is not None:
     #cartoonify(uploaded_file)

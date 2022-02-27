@@ -11,9 +11,8 @@ import sys
 import matplotlib.pyplot as plt
 
 def cartoonify(uploaded_file):
-    # read the image
-    originalmage = cv2.cvtColor(uploaded_file, cv2.COLOR_BGR2RGB)
-    #print(image)  # image is stored in form of numbers
+    image = np.array(uploaded_file)
+    originalmage = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     # confirm that image is chosen
     if originalmage is None:

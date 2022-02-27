@@ -10,12 +10,6 @@ import imageio #to read image stored at particular path
 import sys
 import matplotlib.pyplot as plt
 
-st.title('Cartoonify')
-
-uploaded_file = st.file_uploader("Cartoonify an image")
-if uploaded_file is not None:
-    cartoonify(uploaded_file)
-
 def cartoonify(uploaded_file):
     # read the image
     originalmage = cv2.cvtColor(uploaded_file, cv2.COLOR_BGR2RGB)
@@ -70,7 +64,12 @@ def cartoonify(uploaded_file):
         ax.imshow(images[i], cmap='gray')
     
     plt.show()
-    
+ 
+st.title('Cartoonify')
+
+uploaded_file = st.file_uploader("Cartoonify an image")
+if uploaded_file is not None:
+    cartoonify(uploaded_file)
 
 save = st.button('Save cartoonified image')
 if save:

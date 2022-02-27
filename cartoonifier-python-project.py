@@ -71,9 +71,9 @@ st.title('Cartoonify')
 uploaded_file = st.file_uploader("Cartoonify an image")
 if uploaded_file is not None:
     path_in = uploaded_file.name
-    print(path_in)
-if uploaded_file is not None:
-    cartoonify(uploaded_file)
+    st.success(path_in)
+#if uploaded_file is not None:
+    #cartoonify(uploaded_file)
 
 save = st.button('Save cartoonified image')
 if save:

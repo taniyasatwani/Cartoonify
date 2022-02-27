@@ -1,7 +1,8 @@
 import streamlit as st
 import os
 from PIL import Image
-
+import tensorflow
+from tensorflow.keras.preprocessing import image
 
 import cv2 #for image processing
 import numpy as np #to store image
@@ -11,9 +12,9 @@ import sys
 import matplotlib.pyplot as plt
 
 def cartoonify(uploaded_file):
-    image = np.array(uploaded_file, dtype="uint8")
+    img_array = image.img_to_array(uploaded_file)
    
-    originalmage = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    originalmage = cv2.cvtColor(img_array, cv2.COLOR_BGR2RGB)
 
     # confirm that image is chosen
     if originalmage is None:

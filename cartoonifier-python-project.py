@@ -77,9 +77,9 @@ if uploaded_file is not None:
 
 save = st.button('Save cartoonified image')
 if save:
-    with open(os.path.join(uploaded_file.name),"wb") as f:
+    with open(os.path.join("temp", uploaded_file.name),"wb") as f:
          f.write(uploaded_file.getbuffer())
-    st.success("Saved File:{} to tempDir".format(uploaded_file.name))
+    st.success("Saved File:{} to temp".format(uploaded_file.name))
 
 
 

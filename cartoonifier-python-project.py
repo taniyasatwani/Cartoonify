@@ -9,7 +9,6 @@ import imageio #to read image stored at particular path
 
 import sys
 import matplotlib.pyplot as plt
-from PIL import ImageTk
 
 st.title('Cartoonify')
 
